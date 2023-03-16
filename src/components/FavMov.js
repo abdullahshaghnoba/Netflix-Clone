@@ -33,7 +33,7 @@ export default function FavMov(props) {
            
         };
         
-        const res = await fetch(`https://movies-library-alpha.vercel.app/getmovie/${props.movie.id}`, requestOptions);
+        const res = await fetch(`${process.env.REACT_APP_serverURL}getmovie/${props.movie.id}`, requestOptions);
         const Data = await res.json();
        
         props.setDELETEDArr(Data)

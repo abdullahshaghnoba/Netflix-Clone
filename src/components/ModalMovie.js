@@ -32,7 +32,7 @@ export default function ModalMovie(props) {
         comment: addFeedback
     }
     const fetchRes = async () => {
-        await fetch('https://movies-library-alpha.vercel.app/getMovie', {
+        await fetch(`${process.env.REACT_APP_serverURL}getMovie`, {
 
             method: 'POST',
             body: JSON.stringify(
@@ -77,6 +77,7 @@ export default function ModalMovie(props) {
                 <Button variant="primary" onClick={() => {
                     alert('Added, Thank You For The Feedback')
                     fetchRes();
+                    props.handleclose();
 
                 }}>
                     add to favorite
