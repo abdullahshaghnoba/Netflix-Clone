@@ -1,0 +1,13 @@
+a {
+    margin-left: 200px;
+    text-decoration: none;
+    color: red;
+}
+
+
+
+span.navbar-text {
+    color: yellow;
+    font-size: large;
+    font-weight: bolder;
+}

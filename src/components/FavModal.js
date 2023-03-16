@@ -37,7 +37,7 @@ export default function FavModal(props) {
             body: JSON.stringify(dataToSend)
         };
         
-        const res = await fetch(`https://movies-library-alpha.vercel.app/getMovie/${props.MovieData.id}`, requestOptions);
+        const res = await fetch(`${process.env.REACT_APP_serverURL}getMovie/${props.MovieData.id}`, requestOptions);
         const Data = await res.json();
        
         props.setNewArr(Data)

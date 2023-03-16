@@ -8,7 +8,7 @@ export default function Home (){
 
     const [moviesArr, setMoviesArr] = useState([])
     const sendReq = async ()=>{
-        const serverURL = "https://movies-library-a3cr5d0sx-abdullahshaghnoba.vercel.app/trending";
+        const serverURL = `${process.env.REACT_APP_serverURL}trending`;
         const res = await fetch(serverURL);
         const Data = await res.json();
         setMoviesArr(Data)
